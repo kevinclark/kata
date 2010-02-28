@@ -20,6 +20,14 @@ struct is_prime_impl
             >::value;
 };
 
+template <int checking>
+struct is_prime_impl<3, checking>
+{
+    typedef bool    value_type;
+
+    static const bool value = true;
+};
+
 template<int checking>
 struct is_prime_impl<2, checking>
 {
