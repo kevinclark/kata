@@ -1,4 +1,9 @@
-Seems to work, despite crashing g++ in about 5 minutes.
+[kev@Clio:cpp/primes]$ time g++ -o main main.cpp                                                                                                                                            (02-28 06:37)
+g++ -o main main.cpp  78.73s user 1.00s system 95% cpu 1:23.19 total
+[kev@Clio:cpp/primes]$ ./main                                                                                                                                                               (02-28 06:39)
+What is the 50th prime?231%  
+
+Though g++ crashes if N gets much larger. (Output from nth_prime<100>::value)
 
 nth_prime.hpp:17:   instantiated from ‘nth_prime_impl<22, 401>’
 nth_prime.hpp:25:   instantiated from ‘nth_prime_impl<22, 399>’

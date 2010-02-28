@@ -4,7 +4,7 @@
 
 int main(int argc, char* argv[])
 {
-    std::cout << "What is the 100th prime?" << nth_prime<100>::value;
+    std::cout << "What is the 50th prime?" << nth_prime<50>::value;
 
     return 0;
 }
