@@ -1,7 +1,32 @@
 [kev@Clio:cpp/primes]$ time g++ -o main main.cpp                                                                                                                                            (02-28 06:37)
 g++ -o main main.cpp  78.73s user 1.00s system 95% cpu 1:23.19 total
-[kev@Clio:cpp/primes]$ ./main                                                                                                                                                               (02-28 06:39)
-What is the 50th prime?231%  
+
+[kev@Clio:cpp/primes]$ time ./main
+What is the 50th prime? 231
+./main  0.00s user 0.00s system 81% cpu 0.004 total
+
+Dump of assembler code for function main:
+0x00001e5a <main+0>:	push   %ebp
+0x00001e5b <main+1>:	mov    %esp,%ebp
+0x00001e5d <main+3>:	push   %ebx
+0x00001e5e <main+4>:	sub    $0x14,%esp
+0x00001e61 <main+7>:	call   0x1e66 <main+12>
+0x00001e66 <main+12>:	pop    %ebx
+0x00001e67 <main+13>:	lea    0x57(%ebx),%eax
+0x00001e6d <main+19>:	mov    %eax,0x4(%esp)
+0x00001e71 <main+23>:	lea    0x119a(%ebx),%eax
+0x00001e77 <main+29>:	mov    (%eax),%eax
+0x00001e79 <main+31>:	mov    %eax,(%esp)
+0x00001e7c <main+34>:	call   0x304f <dyld_stub__ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc>
+0x00001e81 <main+39>:	movl   $0xe7,0x4(%esp) <-------- e7 is 231
+0x00001e89 <main+47>:	mov    %eax,(%esp)
+0x00001e8c <main+50>:	call   0x3040 <dyld_stub__ZNSolsEi>
+0x00001e91 <main+55>:	mov    $0x0,%eax
+0x00001e96 <main+60>:	add    $0x14,%esp
+0x00001e99 <main+63>:	pop    %ebx
+0x00001e9a <main+64>:	leave  
+0x00001e9b <main+65>:	ret  
+
 
 Though g++ crashes if N gets much larger. (Output from nth_prime<100>::value)
 
