@@ -163,7 +163,6 @@ int main(int argc, char* argv[])
             {
                 try
                 {
-                    // Uncaught exception here
                     std::cout << FindWord(trie, keys.str(), numAlternatives) << " ";
                 }
                 catch (const std::runtime_error& e)
@@ -180,7 +179,6 @@ int main(int argc, char* argv[])
             }
         }
 
-        // Uncaught exception here too
         std::cout << FindWord(trie, keys.str(), numAlternatives) << std::endl;
     }
 
